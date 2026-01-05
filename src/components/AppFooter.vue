@@ -40,7 +40,7 @@ import { NCollapse, NCollapseItem } from 'naive-ui'
 
     <div class="text-center text-[10px] text-gray-300 pb-6">
       Designed for EV Riders · 
-      <a href="https://github.com/ZenEcho" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">GitHub</a>
+      <a href="https://github.com/ZenEcho/ChargeCheck" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">GitHub</a>
     </div>
   </div>
 </template>
