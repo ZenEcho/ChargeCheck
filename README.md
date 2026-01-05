@@ -1,5 +1,68 @@
-# Vue 3 + TypeScript + Vite
+# ⚡ 充电费率一眼查 (ChargePK) - Smart EV Charging Calc
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**充电费率一眼查** 是一款专为电动车用户设计的智能充电费率计算与对比工具。它能帮助你快速理清复杂的充电费用（电费、服务费、功率损耗），一键计算出“充满电”的总成本和真实的每度电单价，助你轻松避开“电费刺客”。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## ✨ 功能特点
+
+- **🔋 智能参数录入**：支持自定义电池电压、容量及损耗率，计算更精准。
+- **📊 多方案对比**：同时添加多个充电站或充电方案，直观对比价格差异。
+- **💡 灵活单位转换**：支持输入**功率(W)**（适用于充电桩）或**电流(A)**（适用于家用充电器），系统自动换算。
+- **💰 深度成本分析**：
+  - 自动计算充满所需总费用。
+  - **真实单价**核算（包含损耗与服务费）。
+  - 每小时费用明细（电费 vs 服务费）。
+- **🏆 自动优选**：智能标记“最优方案”与“电费刺客”，并显示溢价比例。
+- **📱 响应式设计**：完美适配手机端与 PC 端，随时随地可用。
+
+## 🛠️ 技术栈
+
+本项目基于现代前端技术栈构建，追求极致的开发体验与运行性能：
+
+- **核心框架**: [Vue 3](https://vuejs.org/) (Composition API + `<script setup>`)
+- **语言**: [TypeScript](https://www.typescriptlang.org/)
+- **构建工具**: [Vite](https://vitejs.dev/)
+- **UI 组件库**: [Naive UI](https://www.naiveui.com/)
+- **CSS 引擎**: [UnoCSS](https://unocss.dev/) (高性能原子化 CSS)
+
+## 🚀 快速开始
+
+### 1. 环境准备
+
+确保你的本地环境已安装 [Node.js](https://nodejs.org/) (推荐 v18+)。
+
+### 2. 安装依赖
+
+```bash
+npm install
+```
+
+### 3. 启动开发服务器
+
+```bash
+npm run dev
+```
+启动后访问控制台输出的本地地址（通常是 `http://localhost:5173`）即可看到应用。
+
+### 4. 构建生产版本
+
+```bash
+npm run build
+```
+构建产物将输出到 `dist` 目录，可直接部署到静态网站托管服务（如 Cloudflare Pages, Vercel, Netlify）。
+
+## 📖 使用指南
+
+### 1.  **设定基准**：在顶部卡片输入你的电动车电池参数（如 48V 20Ah）。
+2.  **添加方案**：
+    *   **家用充电**：查看充电器背面标签，填入输出电流（如 3A）。
+    *   **商业充电桩**：查看充电桩屏幕，填入实时功率（如 500W）。
+    *   输入对应的电费单价和服务费。
+3.  **查询结果**：下方卡片会自动排序，推荐性价比最高的方案。
+
+## 🤝 贡献
+
+欢迎提交 Issue 或 Pull Request 来改进这个项目！
+
+## 📄 许可证
+
+[MIT License](LICENSE)
