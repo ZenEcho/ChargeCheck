@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import { NGrid, NGridItem, NInputNumber, NSelect, NButton, NTooltip } from 'naive-ui'
 
+const props = defineProps<{
+  hasResults?: boolean
+}>()
+
 const emit = defineEmits<{
   (e: 'add', scheme: { val: number, unit: 'A' | 'W', ep: number, sp: number }): void
 }>()
@@ -72,7 +76,7 @@ const handleAdd = () => {
         </n-grid-item>
       </n-grid>
       <n-button block type="primary" size="large" @click="handleAdd" class="h-10 md:h-12 font-bold text-sm md:text-base shadow-lg shadow-indigo-200">
-        查看费率
+        {{ props.hasResults ? '添加更多信息' : '查看电费' }}
       </n-button>
     </div>
   </div>
